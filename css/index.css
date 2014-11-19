@@ -35,4 +35,8 @@ body{
 	font-family:"微软雅黑";
 }
 
+.content .oldtitle{
+	background-color:#03A9F4;
+}
+
 .clearframe{clear:both;}
