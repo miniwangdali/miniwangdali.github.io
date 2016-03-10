@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="css/myHomePageStyle.css" />
     <!-- JS
   ================================================== -->
-    <script type="text/javascript" src="js/three.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div class="leftbar">
         <div class="header">
             <img src="images/q-bot-pic2.png" alt="图片加载失败！">
             <canvas id="starCanvas">
                 抱歉！您的浏览器不支持Canvas！
-                Sorry! Your explorer does not support Canvas!
+                Sorry! Your browser does not support Canvas!
             </canvas>
         </div>
         <div class="content">
@@ -50,6 +50,13 @@
             <div class="clearframe"></div>
         </div>
     </div>
+    <div id="rightframe" class="rightframe">
+        <iframe src="http://miniwangdali.github.io/rubikscube/RubiksCube.html">
+            抱歉！您的浏览器不支持iframe标签！
+            Sorry！Your browser does not support iframe!
+        </iframe>
+    </div>
+    <div class="clearframe"></div>
 </body>
 <footer>
 </footer>
