@@ -17,31 +17,41 @@
 <body onload="init()">
     <div class="leftbar">
         <div class="header">
-            <img src="images/q-bot-pic2.png" alt="图片加载失败！">
-            <canvas id="starCanvas">
+            <div id="portrait">
+                <img width=128 height=128 src="images/portrait.jpg" alt="头像加载失败">
+            </div>
+            <div class="myName">
+                <div class="chinese">王小炎</div>
+                <div class="english">Xiaoyan Wang</div>
+            </div>
+            <!--<canvas id="starCanvas">
                 抱歉！您的浏览器不支持Canvas！
                 Sorry! Your browser does not support Canvas!
-            </canvas>
+            </canvas>-->
         </div>
         <div class="content">
-            <ul>
-                <li>
+            <div class="ul">
+                <div class="li">
+                    <div class="chinese">首页</div>
+                    <div class="english">Home</div>
+                </div>
+                <div class="li">
                     <div class="chinese">个人简历</div>
                     <div class="english">My Resume</div>
-                </li>
-                <li>
+                </div>
+                <div class="li">
                     <div class="chinese">个人小项目</div>
                     <div class="english">Projects</div>
-                </li>
-                <li>
+                </div>
+                <div class="li">
                     <div class="chinese">壁纸图片</div>
                     <div class="english">Pictures</div>
-                </li>
-                <li>
+                </div>
+                <div class="li">
                     <div class="chinese">随笔文章</div>
                     <div class="english">Articles</div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div class="email">
@@ -49,6 +59,9 @@
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     <path d="M0 0h24v24H0z" fill="none"/>
                 </svg>
+            </div>
+            <div class="linkedin">
+               
             </div>
             <div class="clearframe"></div>
         </div>

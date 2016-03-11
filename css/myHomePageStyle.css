@@ -23,22 +23,41 @@ body {
 
 div.leftbar{
     margin: 0 auto;
-    padding: 0 auto;
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #1C86EE;
-    width: 23.6%;
+    background-color: #5CACEE;
+    width: 30%;
     height: 100%;
     box-shadow: 5px 0px 10px #B5B5B5;
 }
 div.leftbar .header{
     margin: 0 auto;
-    padding: 0 auto;
+    height: 38%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("../images/White-Album-2-14.jpg");
+}
+div.leftbar .header #portrait{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+div.leftbar .header .myName{
+    color: #FFFAFA;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    top: 64px;
 }
 div.leftbar .header img{
-    height: 200px;
-    width: 100%;
+    position: relative;
+    left: -64px;
+    top: -64px;
+    margin: 0 auto;
+    border-radius: 64px;
+    /*box-shadow: -4px -10px 10px rgba(0,0,0,1) inset;*/
 }
 div.leftbar .header canvas{
     position: absolute;
@@ -47,41 +66,44 @@ div.leftbar .header canvas{
 }
 div.leftbar .content{
     margin: 0 auto;
-    padding: 0 auto;
+    height: 56%;
 }
-div.leftbar .content ul{
-    margin: 0 auto;
-    padding: 0 auto;
-}
-div.leftbar .content ul li{
+div.leftbar .content .ul{
     margin: 10px 0px 10px 0px;
-    padding: 5px;
+    width: 100%;
+}
+div.leftbar .content .ul .li{
+    margin:0 auto;
+    padding: 10px;
     color: #FFFAFA;
     cursor: pointer;
-    list-style-type: none;
     -webkit-transition: background-color 0.4s ease-in, color 0.4s ease-in;
     -moz-transition: background-color 0.4s ease-in, color 0.4s ease-in;
     transition: background-color 0.4s ease-in, color 0.4s ease-in;
     text-align: center;
+    
 }
-div.leftbar .content ul li:hover{
+div.leftbar .content .ul .li:hover{
     color: #1C86EE;
     background-color: #FFFAFA;
     -webkit-transition: background-color 0.4s ease-out, color 0.4s ease-out;
     -moz-transition: background-color 0.4s ease-out, color 0.4s ease-out;
     transition: background-color 0.4s ease-out, color 0.4s ease-out;
 }
-div.leftbar .content ul li div.chinese{
+div.chinese{
     font-size: 1.5em;
 }
-div.leftbar .content ul li div.english{
+div.english{
     font-size: 0.5em;
 }
 div.leftbar .footer{
     margin: 0 auto;
-    padding: 0 auto;
 }
 div.leftbar .footer .email{
+    float: right;
+    cursor: pointer;
+}
+div.leftbar .footer .linkedin{
     float: right;
     cursor: pointer;
 }
@@ -89,7 +111,7 @@ div.rightframe{
     float: right;
     margin: 0;
     padding: 0;
-    width: 76.4%;
+    width: 70%;
     height: 100%;
     background-color: #FFFAFA;
 }
