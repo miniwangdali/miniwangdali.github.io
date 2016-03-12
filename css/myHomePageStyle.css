@@ -26,14 +26,14 @@ div.leftbar{
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #5CACEE;
+    background-color: #42A5F5;
     width: 30%;
     height: 100%;
-    box-shadow: 5px 0px 10px #B5B5B5;
+    box-shadow: 5px 0px 10px #d5d5d5;
 }
 div.leftbar .header{
     margin: 0 auto;
-    height: 38%;
+    height: 40%;
     background-repeat: no-repeat;
     background-position: left top;
     background-image: url("../images/White-Album-2-14.jpg");
@@ -66,7 +66,7 @@ div.leftbar .header canvas{
 }
 div.leftbar .content{
     margin: 0 auto;
-    height: 56%;
+    height: 54%;
 }
 div.leftbar .content .ul{
     margin: 10px 0px 10px 0px;
@@ -84,17 +84,19 @@ div.leftbar .content .ul .li{
     
 }
 div.leftbar .content .ul .li:hover{
-    color: #1C86EE;
+    color: #42A5F5;
     background-color: #FFFAFA;
     -webkit-transition: background-color 0.4s ease-out, color 0.4s ease-out;
     -moz-transition: background-color 0.4s ease-out, color 0.4s ease-out;
     transition: background-color 0.4s ease-out, color 0.4s ease-out;
 }
 div.chinese{
-    font-size: 1.5em;
+    font-size: 1.2em;
+    text-align: center;
 }
 div.english{
     font-size: 0.5em;
+    text-align: center;
 }
 div.leftbar .footer{
     margin: 0 auto;
@@ -120,6 +122,64 @@ div.rightframe iframe{
     height: 100%;
     width: 100%;
     
+}
+div.rightframe .header{
+    margin:0 auto;
+    padding: 5px 20px 5px 20px;
+    height: 5%;
+    box-shadow: 0px 5px 5px #f3f3f3;
+}
+div.rightframe .header div{
+    padding: 5px;
+    float: right;
+    height: 100%;
+}
+div.rightframe .header div.resumeCH{
+    font-size: 1.0em;
+    color: #d5d5d5;
+}
+div.rightframe .header div.resumeCH:active{
+    color: #EC407A;
+}
+div.rightframe .header div.resumeEN{
+    font-size: 1.0em;
+    color: #d5d5d5;
+}
+div.rightframe .header div.resumeEN:active{
+    color: #EC407A;
+}
+div.rightframe .content{
+    margin:0 auto;
+    padding: 10px;
+}
+div.rightframe .content .card{
+    margin:0px 0px 20px 0px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #d5d5d5; 
+}
+div.rightframe .content .card .section{
+    padding: 0px 5px 0px 5px;
+    color: #2196F3;
+    border-bottom-color: #2196F3;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-size: 1.5em;
+}
+div.rightframe .content .card .detail{
+    padding: 10px 5px 0px 5px;
+    color: #212121;
+    font-size: 1.0em;
+}
+div.rightframe .content .card .detail .title{
+    padding: 5px 0px 5px 0px;
+    font-weight: bold;
+}
+div.rightframe .content .card .detail ul{
+    margin: 0;
+}
+div.rightframe .content .card .detail li{
+    padding: 5px;
 }
 .clearframe{
     clear: both;
