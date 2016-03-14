@@ -179,8 +179,20 @@ div.rightframe .content .card .detail .title{
 div.rightframe .content .card .detail ul{
     margin: 0;
 }
-div.rightframe .content .card .detail li{
+div.rightframe .content .card .detail ul.skillblock{
+    list-style: none;
+}
+div.rightframe .content .card .detail ul li{
     padding: 5px;
+}
+div.rightframe .content .card .detail ul.skillblock li{
+    float: left;
+    border-radius: 3px;
+    margin: 0px 5px 0px 5px;
+}
+div.rightframe .content .card .detail ul.skillblock li:hover{
+    background-color: #2196F3;
+    color: #FFFFFF;
 }
 .clearframe{
     clear: both;
