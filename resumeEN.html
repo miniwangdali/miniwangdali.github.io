@@ -12,165 +12,324 @@
     <link rel="stylesheet" href="css/resume.css" />
     <!-- JS
   ================================================== -->
-
+    <script type="text/javascript" src="js/resume.js"></script>
+    
 </head>
 
-<body>
+<body onload="init()">
     <div class="header">
-        <div id="resumeCH" class="resumeCH">中文
-        </div>
-        <div class="switch">
-        </div>
-        <div id="resumeEN" class="resumeEN" active="true">English
+        <div class="wrapper">
+            <div id="resumeCH" class="resumeCH" onclick="toCH()">中文
+            </div>
+            <div class="switch">
+            </div>
+            <div id="resumeEN" class="resumeEN" onclick="toEN()">English
+            </div>
+            <div class="clearframe"></div>
         </div>
     </div>
     <div id="content" class="content">
         <div id="education" class="card">
-            <div class="section">Education
+            <div name="EN">
+                <div class="section">Education
+                </div>
+                <div class="detail">
+                    <div class="title">New York University Tandon School of Engineering, Brooklyn, NY
+                    </div>
+                    <div>Master of Science in Computer Science, May 2017
+                    </div>
+                    <div class="title">Tsinghua University, Beijing, China
+                    </div>
+                    <div>Bachelor of Engineering in Automotive Engineering (Body Design), July 2015
+                    </div>
+                </div>
             </div>
-            <div class="detail">
-                <div class="title">New York University Tandon School of Engineering, Brooklyn, NY
+            <div name="CH">
+                <div class="section">教育经历
                 </div>
-                <div>Master of Science in Computer Science, May 2017
-                </div>
-                <div class="title">Tsinghua University, Beijing, China
-                </div>
-                <div>Bachelor of Engineering in Automotive Engineering (Body Design), July 2015
+                <div class="detail">
+                    <div class="title">纽约大学工学院, 布鲁克林, 纽约州
+                    </div>
+                    <div>计算机科学 硕士学位, 2017年5月
+                    </div>
+                    <div class="title">清华大学, 北京, 中国
+                    </div>
+                    <div>车辆工程（车身设计） 学士学位, 2015年7月
+                    </div>
                 </div>
             </div>
         </div>
         <div id="projects" class="card">
-            <div class="section">Projects
+            <div name="EN">
+                <div class="section">Projects
+                </div>
+                <div class="detail">
+                    <div class="title">LNLibrary – Novel Reading Application on Android, Beijing, China, Sept 2014 ~ Aug 2015
+                    </div>
+                    <ul>
+                        <li>Developed an application for downloading novels from a website and reading novels on smart phone.
+                        </li>
+                        <li><a href="https://github.com/miniwangdali/LNLibrary">Source code</a>
+                        </li>
+                    </ul>
+                    <div class="title">GlobalDrive : Cooperated with Technische Universitaet München, Beijing & Munich, Oct 2013 ~ May 2014
+                    </div>
+                    <ul>
+                        <li>Implemented the interface and function of the application on smart phone
+                        </li>
+                        <li>Contributed to function design, modeling, rendering and final presentation
+                        </li>
+                        <li><a href="https://github.com/miniwangdali/BartenderClient">Source code</a>
+                        </li>
+                    </ul>
+                    <div class="title">BMW Day (Creative Design Competition), Beijing, China, Oct 2012
+                    </div>
+                    <ul>
+                        <li>Contributed to concept and function design.
+                        </li>
+                        <li>Designed and built the model
+                        </li>
+                        <li>The group design got 2nd prize
+                        </li>
+                    </ul>
+                    <div class="title">Volkswagens People’s Car Project (PCP), Beijing, China, Oct 2012 ~ Apr 2013
+                    </div>
+                    <ul>
+                        <li>Contributed to preliminary analysis, function design, body design.
+                        </li>
+                        <li>Analyzed simple human-machine layout
+                        </li>
+                        <li>The group plan was selected as one of the final six.
+                        </li>
+                    </ul>
+                    <div class="title">Graduation Project – A Design of Intelligent In-Vehicle Human-Computer Interaction System
+                    </div>
+                    <ul>
+                        <li>Analyzed the history, discovered problems and design a scheme of in-vehicle human-computer interaction
+                            system
+                        </li>
+                        <li>Built a simulating environment to support the research based on Unity 3D.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="detail">
-                <div class="title">LNLibrary – Novel Reading Application on Android, Beijing, China, Sept 2014 ~ Aug 2015
+            <div name="CH">
+                <div class="section">项目经验
                 </div>
-                <ul>
-                    <li>Developed an application for downloading novels from a website and reading novels on smart phone.
-                    </li>
-                    <li><a href="https://github.com/miniwangdali/LNLibrary">Source code</a>
-                    </li>
-                </ul>
-                <div class="title">GlobalDrive : Cooperated with Technische Universitaet München, Beijing & Munich, Oct 2013 ~ May 2014
+                <div class="detail">
+                    <div class="title">LNLibrary – 轻小说阅读安卓应用, 北京, 中国, 2014年9月 ~ 2015年8月
+                    </div>
+                    <ul>
+                        <li>独立开发了从特定网站下载并在手机上阅读小说的安卓应用
+                        </li>
+                        <li><a href="https://github.com/miniwangdali/LNLibrary">点击这里查看源代码</a>
+                        </li>
+                    </ul>
+                    <div class="title">GlobalDrive : 与德国慕尼黑工业大学合作, 北京 & 慕尼黑, 2013年10月 ~ 2014年5月
+                    </div>
+                    <ul>
+                        <li>实现智能手机客户端应用的界面及功能
+                        </li>
+                        <li>深度参与整体的功能设计，建模，渲染，以及最终展示
+                        </li>
+                        <li><a href="https://github.com/miniwangdali/BartenderClient">点击这里查看源代码</a>
+                        </li>
+                    </ul>
+                    <div class="title">宝马日（创新设计大赛）, 北京, 中国, 2012年10月
+                    </div>
+                    <ul>
+                        <li>深度参与概念设计及功能设计
+                        </li>
+                        <li>设计原型并进行建模
+                        </li>
+                        <li>小组最终获得二等奖
+                        </li>
+                    </ul>
+                    <div class="title">大众自造车项目(PCP), 北京, 中国, 2012年10月 ~ 2013年四月
+                    </div>
+                    <ul>
+                        <li>深度参与前期分析，功能设计，造型设计
+                        </li>
+                        <li>进行了简单的人机交互界面分析
+                        </li>
+                        <li>小组方案入选最终的六个方案
+                        </li>
+                    </ul>
+                    <div class="title">毕业设计 – 智能化车载人机交互系统的方案设计
+                    </div>
+                    <ul>
+                        <li>分析车载人机交互系统的历史，发现当前存在的问题，总结发展的趋势，提出并分析了一种可行的设计方案
+                        </li>
+                        <li>基于Unity3D建立了一个用于辅助课题研究的模拟实验环境
+                        </li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Implemented the interface and function of the application on smart phone
-                    </li>
-                    <li>Contributed to function design, modeling, rendering and final presentation
-                    </li>
-                    <li><a href="https://github.com/miniwangdali/BartenderClient">Source code</a>
-                    </li>
-                </ul>
-                <div class="title">BMW Day (Creative Design Competition), Beijing, China, Oct 2012
-                </div>
-                <ul>
-                    <li>Contributed to concept and function design.
-                    </li>
-                    <li>Designed and built the model
-                    </li>
-                    <li>The group design got 2nd prize
-                    </li>
-                </ul>
-                <div class="title">Volkswagens People’s Car Project (PCP), Beijing, China, Oct 2012 ~ Apr 2013
-                </div>
-                <ul>
-                    <li>Contributed to preliminary analysis, function design, body design.
-                    </li>
-                    <li>Analyzed simple human-machine layout
-                    </li>
-                    <li>The group plan was selected as one of the final six.
-                    </li>
-                </ul>
-                <div class="title">Graduation Project – A Design of Intelligent In-Vehicle Human-Computer Interaction System
-                </div>
-                <ul>
-                    <li>Analyzed the history, discovered problems and design a scheme of in-vehicle human-computer interaction
-                        system
-                    </li>
-                    <li>Built a simulating environment to support the research based on Unity 3D.
-                    </li>
-                </ul>
             </div>
         </div>
         <div id="experience" class="card">
-            <div class="section">Experience
+            <div name="EN">
+                <div class="section">Experience
+                </div>
+                <div class="detail">
+                    <div class="title"><i>Intern,</i> Research & Development China Safety and Comfort (RD C/SC) Department, Daimler Greater
+                        China Ltd., Jan 2015 ~ Jun 2015
+                    </div>
+                    <ul>
+                        <li>Assisted other staffs in research and development
+                        </li>
+                    </ul>
+                    <div class="title"><i>Front-end Engineer,</i> Ryu Productions Co. Ltd., Feb 2014 ~ Mar 2014
+                    </div>
+                    <ul>
+                        <li>Promoted the web page design
+                        </li>
+                        <li>Implemented the web page
+                        </li>
+                    </ul>
+                    <div class="title"><i>Program Developer,</i> Beijing Infocreate Science & Technology Development Co. Ltd., Aug 2013 ~ Feb
+                        2014
+                    </div>
+                    <ul>
+                        <li>Contributed to Developing a Remote Control System for exhibition, implement the client android application
+                        </li>
+                        <li>Contributed to debugging and modification of some other programs
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="detail">
-                <div class="title"><i>Intern,</i> Research & Development China Safety and Comfort (RD C/SC) Department, Daimler Greater China
-                    Ltd., Jan 2015 ~ Jun 2016
+            <div name="CH">
+                <div class="section">工作经验
                 </div>
-                <ul>
-                    <li>Assisted other staffs in research and development
-                    </li>
-                </ul>
-                <div class="title"><i>Front-end Engineer,</i> Ryu Productions Co. Ltd., Feb 2014 ~ Mar 2014
+                <div class="detail">
+                    <div class="title"><i>实习生,</i>中国舒适与安全研究开发部, 戴姆勒大中华区投资有限公司, 2015年1月 ~ 2015年6月
+                    </div>
+                    <ul>
+                        <li>辅助其他员工进行研究开发
+                        </li>
+                    </ul>
+                    <div class="title"><i>前端工程师,</i> Ryu Productions Co. Ltd., 2014年2月 ~ 2014年3月
+                    </div>
+                    <ul>
+                        <li>改进网页设计
+                        </li>
+                        <li>实现网页
+                        </li>
+                    </ul>
+                    <div class="title"><i>程序开发员,</i> 北京炎丰新创科技发展有限公司, 2013年8月 ~ 2014年2月
+                    </div>
+                    <ul>
+                        <li>参与开发展项远程控制系统，独立实现安卓客户端应用
+                        </li>
+                        <li>调试与修改公司的其他项目
+                        </li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Promoted the web page design
-                    </li>
-                    <li>Implemented the web page
-                    </li>
-                </ul>
-                <div class="title"><i>Program Developer,</i> Beijing Infocreate Science & Technology Development Co. Ltd., Aug 2013 ~ Feb 2014
-                </div>
-                <ul>
-                    <li>Contributed to Developing a Remote Control System for exhibition, implement the client android application
-                    </li>
-                    <li>Contributed to debugging and modification of some other programs
-                    </li>
-                </ul>
             </div>
         </div>
         <div id="skills" class="card">
-            <div class="section">Skills
+            <div name="EN">
+                <div class="section">Skills
+                </div>
+                <div class="detail">
+                    <div class="title">Programing Language
+                    </div>
+                    <ul class="skillblock">
+                        <li>C/C++</li>
+                        <li>JAVA</li>
+                        <li>HTML/CSS</li>
+                        <li>Javascript</li>
+                        <div class="clearframe"></div>
+                    </ul>
+                    <div class="title">Graphic Design & Image Processing Software
+                    </div>
+                    <ul class="skillblock">
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Corel Draw</li>
+                        <li>Flash</li>
+                        <div class="clearframe"></div>
+                    </ul>
+                    <div class="title">Modeling Software & Game Engine
+                    </div>
+                    <ul class="skillblock">
+                        <li>3DS Max</li>
+                        <li>AutoCAD</li>
+                        <li>Unity3D</li>
+                        <div class="clearframe"></div>
+                    </ul>
+                    <div class="title">Well in using Word, Excel, PowerPoint, and Access and could analyze data with Excel and Access.
+                    </div>
+                </div>
             </div>
-            <div class="detail">
-                <div class="title">Programing Language
+            <div name="CH">
+                <div class="section">技术技能
                 </div>
-                <ul class="skillblock">
-                    <li>C/C++</li>
-                    <li>JAVA</li>
-                    <li>HTML/CSS</li>
-                    <li>Javascript</li>
-                    <div class="clearframe"></div>
-                </ul>
-                <div class="title">Graphic Design & Image Processing Software
-                </div>
-                <ul class="skillblock">
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Corel Draw</li>
-                    <li>Flash</li>
-                    <div class="clearframe"></div>
-                </ul>
-                <div class="title">Modeling Software & Game Engine
-                </div>
-                <ul class="skillblock">
-                    <li>3DS Max</li>
-                    <li>AutoCAD</li>
-                    <li>Unity3D</li>
-                    <div class="clearframe"></div>
-                </ul>
-                <div class="title">Well in using Word, Excel, PowerPoint, and Access and could analyze data with Excel and Access.
+                <div class="detail">
+                    <div class="title">编程语言
+                    </div>
+                    <ul class="skillblock">
+                        <li>C/C++</li>
+                        <li>JAVA</li>
+                        <li>HTML/CSS</li>
+                        <li>Javascript</li>
+                        <div class="clearframe"></div>
+                    </ul>
+                    <div class="title">图形图像处理
+                    </div>
+                    <ul class="skillblock">
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Corel Draw</li>
+                        <li>Flash</li>
+                        <div class="clearframe"></div>
+                    </ul>
+                    <div class="title">建模与游戏引擎
+                    </div>
+                    <ul class="skillblock">
+                        <li>3DS Max</li>
+                        <li>AutoCAD</li>
+                        <li>Unity3D</li>
+                        <div class="clearframe"></div>
+                    </ul>
+                    <div class="title">熟练掌握Word、Excel、PowerPoint、Access并能通过Excel与Access进行数据管理以及分析
+                    </div>
                 </div>
             </div>
         </div>
         <div id="leadership" class="card">
-            <div class="section">Leadership
+            <div name="EN">
+                <div class="section">Leadership
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li><i>Cadre,</i> Student Association of Science and Technology, Department of Automotive Engineering,
+                            Tsinghua University
+                        </li>
+                        <li><i>Cadre,</i> Propaganda Department of Student Union, Department of Automotive Engineering, Tsinghua
+                            University
+                        </li>
+                        <li><i>Volunteer,</i> Beijing West Railway Station, Beijing
+                        </li>
+                        <li><i>Part-time,</i> School Library of Tsinghua University
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="detail">
-                <ul>
-                    <li><i>Cadre,</i> Student Association of Science and Technology, Department of Automotive Engineering, Tsinghua
-                        University
-                    </li>
-                    <li><i>Cadre,</i> Propaganda Department of Student Union, Department of Automotive Engineering, Tsinghua
-                        University
-                    </li>
-                    <li><i>Volunteer,</i> Beijing West Railway Station, Beijing
-                    </li>
-                    <li><i>Part-time,</i> School Library of Tsinghua University
-                    </li>
-                </ul>
+            <div name="CH">
+                <div class="section">社工经验
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li><i>干事,</i> 清华大学汽车工程系科学与技术协会
+                        </li>
+                        <li><i>干事,</i> 清华大学汽车工程系学生会宣传部
+                        </li>
+                        <li><i>志愿者,</i> 北京西站问讯处
+                        </li>
+                        <li><i>兼职,</i> 清华大学图书馆
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

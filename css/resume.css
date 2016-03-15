@@ -14,12 +14,21 @@ body {
     vertical-align: baseline; 
 }
 div.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     margin:0 auto;
     padding: 5px 20px 5px 20px;
     height: 2em;
     box-shadow: 0px 0px 15px #f3f3f3;
+    background-color: #FFFAFA;
 }
-div.header div{
+div.header .wrapper{
+    margin:0px 40px 0px 0px;
+    padding:0;
+}
+div.header .wrapper div{
     padding: 5px;
     float: right;
     height: 100%;
@@ -27,6 +36,7 @@ div.header div{
 div.header div.resumeCH{
     font-size: 1.0em;
     color: #d5d5d5;
+    cursor: pointer;
 }
 div.header div.resumeCH:active{
     color: #EC407A;
@@ -34,12 +44,13 @@ div.header div.resumeCH:active{
 div.header div.resumeEN{
     font-size: 1.0em;
     color: #d5d5d5;
+    cursor: pointer;
 }
 div.header div.resumeEN:active{
     color: #EC407A;
 }
 div.content{
-    margin:0 auto;
+    margin:2.5em auto;
     padding: 10px;
 }
 div.content .card{
