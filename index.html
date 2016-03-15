@@ -13,7 +13,7 @@
     <!-- JS
   ================================================== -->
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/resume.js"></script>
+    
 </head>
 <body onload="init()">
     <div class="leftbar">
@@ -36,7 +36,7 @@
                     <div class="chinese">首页</div>
                     <div class="english">Home</div>
                 </div>
-                <div class="li">
+                <div class="li" onclick="gotoResume()">
                     <div class="chinese">个人简历</div>
                     <div class="english">My Resume</div>
                 </div>
@@ -68,21 +68,10 @@
         </div>
     </div>
     <div id="rightframe" class="rightframe">
-        <!--<iframe src="">
+        <iframe id="pages" src="">
             抱歉！您的浏览器不支持iframe标签！
             Sorry！Your browser does not support iframe!
-        </iframe>-->
-        <div class="header">
-            <div id="resumeCH" class="resumeCH">中文
-            </div>
-            <div class="switch">
-            </div>
-            <div id="resumeEN" class="resumeEN" active="true">English
-            </div>
-        </div>
-        <div id="content" class="content">
-            
-        </div>
+        </iframe>
     </div>
     <div class="clearframe"></div>
 </body>

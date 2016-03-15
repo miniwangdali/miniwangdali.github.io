@@ -1,12 +1,14 @@
 var rightframe;
 var leftheader;
 var portrait;
-var rightcontent;
+var pagesframe;
 
 function init(){
     leftheader = document.getElementById("lHeader");
     portrait = document.getElementById("portrait");
     rightframe = document.getElementById("rightframe");
-    rightcontent = document.getElementById("content");
-    getResume("EN");
+    pagesframe = document.getElementById("pages");
+}
+function gotoResume(){
+    pagesframe.src = "./resumeEN.html";
 }
