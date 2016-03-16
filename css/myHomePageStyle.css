@@ -1,10 +1,3 @@
-@keyframes gradientAppear{
-    0%  {opacity: 0%;}
-    25% {opacity: 50%}
-    50% {opacity: 75%}
-    75% {opacity: 90%}
-    100%{opacity: 100%}
-}
 html {
     min-height: 100%;
     height: 100%;
@@ -67,11 +60,13 @@ div.leftbar .header canvas{
 }
 div.leftbar .content{
     margin: 0 auto;
-    height: 54%;
+    height: 55%;
+    width: 100%;
 }
 div.leftbar .content .ul{
     margin: 10px 0px 10px 0px;
     width: 100%;
+    float: left;
 }
 div.leftbar .content .ul .li{
     margin:0 auto;
@@ -85,6 +80,32 @@ div.leftbar .content .ul .li{
     
 }
 div.leftbar .content .ul .li:hover{
+    color: #42A5F5;
+    background-color: #FFFAFA;
+    -webkit-transition: background-color 0.4s ease-out, color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out, color 0.4s ease-out;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out;
+}
+div.leftbar .content .subul{
+    margin: 10px 0px 10px 0px;
+    width: 50%;
+    height: 90%;
+    float: left;
+    display: none;
+    background-color: #1976D2;
+}
+div.leftbar .content .subul .subli{
+    visibility: hidden;
+    margin:0 auto;
+    padding: 10px;
+    color: #FFFAFA;
+    cursor: pointer;
+    -webkit-transition: background-color 0.4s ease-in, color 0.4s ease-in;
+    -moz-transition: background-color 0.4s ease-in, color 0.4s ease-in;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
+    text-align: center;
+}
+div.leftbar .content .subul .subli:hover{
     color: #42A5F5;
     background-color: #FFFAFA;
     -webkit-transition: background-color 0.4s ease-out, color 0.4s ease-out;
