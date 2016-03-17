@@ -73,7 +73,23 @@ function resumeListFadeIn(parent){
     }
     
 }
+function gotoEdu(){
+    if(iframe == null) iframe = document.getElementById("pages");
+    scrollToOnIframe(iframe, "education");
+}
 function gotoPro(){
     if(iframe == null) iframe = document.getElementById("pages");
     scrollToOnIframe(iframe, "projects");
+}
+function gotoExp(){
+    if(iframe == null) iframe = document.getElementById("pages");
+    scrollToOnIframe(iframe, "experience");
+}
+function gotoSkill(){
+    if(iframe == null) iframe = document.getElementById("pages");
+    scrollToOnIframe(iframe, "skills");
+}
+function gotoLead(){
+    if(iframe == null) iframe = document.getElementById("pages");
+    scrollToOnIframe(iframe, "leadership");
 }

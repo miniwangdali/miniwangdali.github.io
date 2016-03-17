@@ -19,7 +19,7 @@ function scrollSmoothly(iframe, pos){
     if(repeatCount < times){
         iframe.contentWindow.scrollBy(0, 50);
         repeatCount ++;
-        clearTimeOut = iframe.contentWindow.setTimeout("ScrollSmoothly('" + iframe + "','" + pos +"')", 100);
+        clearTimeOut = iframe.contentWindow.setTimeout("scrollSmoothly('" + iframe + "','" + pos +"')", 100);
     }else{
         repeatCount = 0;
         clearTimeout(clearTimeOut);
