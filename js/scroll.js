@@ -17,9 +17,9 @@ function scrollSmoothly(pos){
     if(myframe == null) myframe = window;
     var times = pos / 50;
     if(repeatCount < times){
-        myframe.contentWindow.scrollBy(0, 50);
+        myframe.contentWindow.scrollBy(0, 10);
         repeatCount ++;
-        clearTimeOut = setTimeout("scrollSmoothly('" + pos +"')", 100);
+        clearTimeOut = setTimeout("scrollSmoothly('" + pos +"')", 10);
     }else{
         repeatCount = 0;
         clearTimeout(clearTimeOut);
