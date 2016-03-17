@@ -32,6 +32,6 @@ function scrollToOnIframe(iframe, id){
     var scrollToPos = elementPosition(element).y;
     scrollToPos -= myframe.contentDocument.documentElement.scrollTop;
     var remainder = scrollToPos % 50;
-    scrollSmoothly(crollToPos - remainder);
+    scrollSmoothly(scrollToPos - remainder);
     myframe.contentWindow.scrollBy(0, remainder);
 }
