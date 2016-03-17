@@ -12,6 +12,7 @@ function init(){
     portrait = document.getElementById("portrait");
     rightframe = document.getElementById("rightframe");
     pagesframe = document.getElementById("pages");
+    iframe = document.getElementById("pages");
 }
 function gotoResume(){
     if(listOpen) return;
