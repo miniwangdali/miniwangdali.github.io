@@ -15,7 +15,7 @@ var clearTimeOut;
 var myframe;
 function scrollSmoothly(pos){
     if(myframe == null) myframe = window;
-    var times = pos / 50;
+    var times = pos / 10;
     if(repeatCount < times){
         myframe.contentWindow.scrollBy(0, 10);
         repeatCount ++;
@@ -31,7 +31,7 @@ function scrollToOnIframe(iframe, id){
     var element = myframe.contentDocument.getElementById(id);
     var scrollToPos = elementPosition(element).y;
     scrollToPos -= myframe.contentDocument.documentElement.scrollTop;
-    var remainder = scrollToPos % 50;
+    var remainder = scrollToPos % 10;
     scrollSmoothly(scrollToPos - remainder);
     myframe.contentWindow.scrollBy(0, remainder);
 }
