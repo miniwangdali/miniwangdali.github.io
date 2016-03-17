@@ -12,14 +12,14 @@ function elementPosition(obj) {
 }
 var repeatCount = 0;
 var clearTimeOut;
-
-function scrollSmoothly(iframe, pos){
-    if(iframe == null) iframe = window;
+var myframe;
+function scrollSmoothly(pos){
+    if(myframe == null) myframe = window;
     var times = pos / 50;
     if(repeatCount < times){
-        iframe.contentWindow.scrollBy(0, 50);
+        myframe.contentWindow.scrollBy(0, 50);
         repeatCount ++;
-        clearTimeOut = setTimeout("scrollSmoothly('" + iframe + "','" + pos +"')", 100);
+        clearTimeOut = setTimeout("scrollSmoothly('" + pos +"')", 100);
     }else{
         repeatCount = 0;
         clearTimeout(clearTimeOut);
@@ -27,10 +27,11 @@ function scrollSmoothly(iframe, pos){
 }
 function scrollToOnIframe(iframe, id){
     if(iframe == null) iframe = window;
-    var element = iframe.contentDocument.getElementById(id);
+    myframe = iframe;
+    var element = myframe.contentDocument.getElementById(id);
     var scrollToPos = elementPosition(element).y;
-    scrollToPos -= iframe.contentDocument.documentElement.scrollTop;
+    scrollToPos -= myframe.contentDocument.documentElement.scrollTop;
     var remainder = scrollToPos % 50;
-    scrollSmoothly(iframe, scrollToPos - remainder);
-    iframe.contentWindow.scrollBy(0, remainder);
+    scrollSmoothly(crollToPos - remainder);
+    myframe.contentWindow.scrollBy(0, remainder);
 }
