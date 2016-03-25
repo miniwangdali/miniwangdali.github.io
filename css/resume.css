@@ -60,8 +60,8 @@ div.content .card{
     border-radius: 5px;
     box-shadow: 0px 1px 10px #d5d5d5; 
     backface-visibility: visible;
-    animation: flipInX 1.2s;
-    -webkit-animation: flipInX 1.2s; 
+    /*animation: flipInX 1.2s;
+    -webkit-animation: flipInX 1.2s; */
 }
 div.content .card .section{
     padding: 0px 5px 0px 5px;
