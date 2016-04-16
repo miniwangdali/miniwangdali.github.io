@@ -1,10 +1,12 @@
 var naviWrapper, contentWrapper;
 var width, height, aspect;
+var clientWindow, menuState;
 function init(){
     naviWrapper = document.getElementById("navi-wrapper");
     contentWrapper = document.getElementById("content-wrapper");
     window.addEventListener("resize", onWindowResize, false);
     onWindowResize();
+    menuState = 0;
 }
 
 function onWindowResize(){
@@ -12,23 +14,33 @@ function onWindowResize(){
     height = window.innerHeight;
     aspect = width / height;
     if(aspect < 1 || width < 640){
-        resizeNavi(1);
+        clientWindow = 1;
+        resizeNavi();
     }else if(width < 960){
-        resizeNavi(2);
+        clientWindow = 2;
+        resizeNavi();
     }else{
-        resizeNavi(3);
+        clientWindow = 3;
+        resizeNavi();
     }
 }
 
 // mode : 1 - mobile, 2 - square screen, 3 - wide screen
-function resizeNavi(mode) {
-    switch (mode) {
+function resizeNavi() {
+    switch (clientWindow) {
         case 1:
             naviWrapper.style.width = "100%";
+            naviWrapper.style.minHeight = "160px";
             var header = document.getElementById("navi-header");
             header.style.display = "none";
             var menu = document.getElementById("menu");
+            menu.style.position = "fixed";
+            menu.style.width = 0;
+            var menuBtn = document.getElementById("menu-btn");
+            menuBtn.style.display = "inline";
+            menuBtn.style.padding = "10px 20px 10px 20px";
             var ul = menu.getElementsByTagName("ul")[0];
+            ul.style.display = "none";
             ul.style.padding = "0px 20px 0px 20px";
             var lis = ul.getElementsByTagName("li");
             for(var i = 0; i < lis.length; i ++){
@@ -38,14 +50,21 @@ function resizeNavi(mode) {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="table-cell";
             }
-            contentWrapper.style.width = "100%";
+            contentWrapper.style.padding = "160px 0px 0px 0px";
             break;
         case 2:
             naviWrapper.style.width = "60px";
+            naviWrapper.style.minHeight = "100%";
             var header = document.getElementById("navi-header");
             header.style.display = "none";
             var menu = document.getElementById("menu");
+            menu.style.position = "static";
+            menu.style.width = "100%";
+            var menuBtn = document.getElementById("menu-btn");
+            menuBtn.style.display = "inline";
+            menuBtn.style.padding = "10px 20px 10px 20px";
             var ul = menu.getElementsByTagName("ul")[0];
+            ul.style.display = "inline";
             ul.style.padding = "0";
             var lis = ul.getElementsByTagName("li");
             for(var i = 0; i < lis.length; i ++){
@@ -55,14 +74,20 @@ function resizeNavi(mode) {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="none";
             }
-            contentWrapper.style.width = width - 60 + "px";
+            contentWrapper.style.padding = "0px 0px 0px 60px";
             break;
         case 3:
             naviWrapper.style.width = "300px";
+            naviWrapper.style.minHeight = "100%";
             var header = document.getElementById("navi-header");
             header.style.display = "inline";
             var menu = document.getElementById("menu");
+            menu.style.position = "static";
+            menu.style.width = "100%";
+            var menuBtn = document.getElementById("menu-btn");
+            menuBtn.style.display = "none";
             var ul = menu.getElementsByTagName("ul")[0];
+            ul.style.display = "inline";
             ul.style.padding = "0px 20px 0px 20px";
             var lis = ul.getElementsByTagName("li");
             for(var i = 0; i < lis.length; i ++){
@@ -72,7 +97,67 @@ function resizeNavi(mode) {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="table-cell";
             }
-            contentWrapper.style.width = width - 300 + "px";
+            contentWrapper.style.padding = "0px 0px 0px 300px";
+            break;
+        default:
+            break;
+    }
+}
+
+function menuFolder() {
+    var menu = document.getElementById("menu");
+    var ul = menu.getElementsByTagName("ul")[0];
+    switch (menuState) {
+        case 0: // should open
+            if(clientWindow == "1"){
+                
+                menu.style.width = "300px";
+                var myFunction = function(){
+                    ul.style.display = "inline";
+                    menu.removeEventListener("transitionend", myFunction);
+                }
+                menu.addEventListener("transitionend", myFunction);
+                menuState = 1;
+            }else{
+                naviWrapper.style.width = "300px";
+                menu.style.width="100%";
+                var myFunction = function() {
+                    var texts = menu.getElementsByClassName("text");
+                    for(var i = 0; i < texts.length; i ++){
+                        texts[i].style.display="table-cell";
+                    }
+                    naviWrapper.removeEventListener("transitionend", myFunction);
+                }
+                naviWrapper.addEventListener("transitionend", myFunction);
+                
+                ul.style.padding = "0px 20px 0px 20px";
+                var lis = ul.getElementsByTagName("li");
+                for(var i = 0; i < lis.length; i ++){
+                    lis[i].style.padding = "10px 20px 10px 20px";
+                }
+                
+                menuState = 1;
+            }
+            break;
+        case 1: // should close
+            if(clientWindow == 1){
+                menu.style.width = "0px";
+                ul.style.display = "none";
+                menuState = 0;
+            }else{
+                naviWrapper.style.width = "60px";
+                menu.style.width = "100%";
+                ul.style.padding = "0";
+                var lis = ul.getElementsByTagName("li");
+                for(var i = 0; i < lis.length; i ++){
+                    lis[i].style.padding = "10px 10px 10px 10px";
+                }
+                var texts = menu.getElementsByClassName("text");
+                for(var i = 0; i < texts.length; i ++){
+                    texts[i].style.display="none";
+                }
+                menuState = 0;
+            }
             break;
         default:
             break;

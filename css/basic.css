@@ -18,13 +18,13 @@ div {
     padding: 0;
 }
 div.navi-wrapper {
-    padding: 40px 0;
+    position: absolute;
+    padding: 40px 0 0 0;
     background-color: #009688;
-    min-height: 100%;
-    float: left;
-    -webkit-transition: width 1s;
-    -moz-transition: width 1s;
-    transition: width 1s;
+
+    -webkit-transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    transition: width 0.7s;
     color: #E0F2F1;
 }
 div.navi-wrapper .header{
@@ -40,23 +40,30 @@ div.navi-wrapper .header .myName .chinese{
 div.navi-wrapper .header .myName .english{
     font-size: 0.8em;
 }
+div.navi-wrapper .title {
+    cursor: pointer;
+}
 div.navi-wrapper .menu{
     margin: 5px 0px 5px 0px;
     padding: 5px 0px 5px 0px;
+    background-color: #009688;
+    min-height: 100%;
+    -webkit-transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    transition: width 0.7s;
+    z-index: 10;
 }
 div.navi-wrapper .menu ul{
-    padding: 0px 20px 0px 20px;
     list-style-type: none;
-    -webkit-transition: padding 1s;
-    -moz-transition: padding 1s;
-    transition: padding 1s;
+    -webkit-transition: padding 0.7s;
+    -moz-transition: padding 0.7s;
+    transition: padding 0.7s;
 }
 div.navi-wrapper .menu ul li{
     display: table;
-    padding: 10px 20px 10px 20px;
-    -webkit-transition: padding 1s;
-    -moz-transition: padding 1s;
-    transition: padding 1s;
+    -webkit-transition: padding 0.7s;
+    -moz-transition: padding 0.7s;
+    transition: padding 0.7s;
 }
 div.navi-wrapper .menu ul li .icon{
     display: table-cell;
@@ -71,7 +78,8 @@ div.navi-wrapper .menu ul li .text {
 div.content-wrapper {
     background-color: #E0F2F1;
     min-height: 100%;
-    float: left;
+    width: 100%;
+
 }
 div.portrait {
     width: 100%;
