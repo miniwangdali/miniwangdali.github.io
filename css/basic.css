@@ -18,16 +18,75 @@ div {
     padding: 0;
 }
 div.navi-wrapper {
+    padding: 40px 0;
     background-color: #009688;
     min-height: 100%;
     float: left;
-    transition: width 1s;
     -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    transition: width 1s;
+    color: #E0F2F1;
+}
+div.navi-wrapper .header{
+    text-align: center;
+}
+div.navi-wrapper .header .myName {
+    margin: 5px 0px 5px 0px;
+    padding: 5px 0px 5px 0px;
+}
+div.navi-wrapper .header .myName .chinese{
+    font-size: 1.2em;
+}
+div.navi-wrapper .header .myName .english{
+    font-size: 0.8em;
+}
+div.navi-wrapper .menu{
+    margin: 5px 0px 5px 0px;
+    padding: 5px 0px 5px 0px;
+}
+div.navi-wrapper .menu ul{
+    padding: 0px 20px 0px 20px;
+    list-style-type: none;
+    -webkit-transition: padding 1s;
+    -moz-transition: padding 1s;
+    transition: padding 1s;
+}
+div.navi-wrapper .menu ul li{
+    display: table;
+    padding: 10px 20px 10px 20px;
+    -webkit-transition: padding 1s;
+    -moz-transition: padding 1s;
+    transition: padding 1s;
+}
+div.navi-wrapper .menu ul li .icon{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 10px 0px 10px;
+}
+div.navi-wrapper .menu ul li .text {
+    display: table-cell;
+    vertical-align: middle;
+    
 }
 div.content-wrapper {
     background-color: #E0F2F1;
     min-height: 100%;
     float: left;
+}
+div.portrait {
+    width: 100%;
+}
+div.portrait img{
+    border-width: 0px;
+    border-radius: 64px;
+    box-shadow: 0px 0px 10px #004D40;
+}
+
+div.chinese{
+    font-size: 1.0em;
+}
+div.english{
+    font-size: 0.6em;
 }
 .clearframe {
     clear: both;
