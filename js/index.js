@@ -7,6 +7,7 @@ function init(){
     window.addEventListener("resize", onWindowResize, false);
     onWindowResize();
     menuState = 0;
+    menuBtnInit();
 }
 
 function onWindowResize(){
