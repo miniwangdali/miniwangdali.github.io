@@ -14,7 +14,7 @@ function onWindowResize(){
     width = window.innerWidth;
     height = window.innerHeight;
     aspect = width / height;
-    if(aspect < 1 || width < 640){
+    if(aspect < 3.0 / 4.0 || width < 640){
         clientWindow = 1;
         resizeNavi();
     }else if(width < 960){
@@ -31,7 +31,7 @@ function resizeNavi() {
     switch (clientWindow) {
         case 1:
             naviWrapper.style.width = "100%";
-            naviWrapper.style.minHeight = "160px";
+            naviWrapper.style.height = "33%";
             var header = document.getElementById("navi-header");
             header.style.display = "none";
             var menu = document.getElementById("menu");
@@ -51,11 +51,11 @@ function resizeNavi() {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="table-cell";
             }
-            contentWrapper.style.padding = "160px 0px 0px 0px";
+            contentWrapper.style.padding = naviWrapper.style.height + "px 0px 0px 0px";
             break;
         case 2:
             naviWrapper.style.width = "60px";
-            naviWrapper.style.minHeight = "100%";
+            naviWrapper.style.height = "100%";
             var header = document.getElementById("navi-header");
             header.style.display = "none";
             var menu = document.getElementById("menu");
@@ -75,11 +75,11 @@ function resizeNavi() {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="none";
             }
-            contentWrapper.style.padding = "0px 0px 0px 60px";
+            contentWrapper.style.padding = "0px 0px 0px " + naviWrapper.style.width +"px";
             break;
         case 3:
             naviWrapper.style.width = "300px";
-            naviWrapper.style.minHeight = "100%";
+            naviWrapper.style.height = "100%";
             var header = document.getElementById("navi-header");
             header.style.display = "inline";
             var menu = document.getElementById("menu");
@@ -111,8 +111,7 @@ function menuFolder() {
     switch (menuState) {
         case 0: // should open
             if(clientWindow == "1"){
-                
-                menu.style.width = "300px";
+                menu.style.width = "70%";
                 var myFunction = function(){
                     ul.style.display = "inline";
                     menu.removeEventListener("transitionend", myFunction);
@@ -120,7 +119,7 @@ function menuFolder() {
                 menu.addEventListener("transitionend", myFunction);
                 menuState = 1;
             }else{
-                naviWrapper.style.width = "300px";
+                naviWrapper.style.width = "30%";
                 menu.style.width="100%";
                 var myFunction = function() {
                     var texts = menu.getElementsByClassName("text");
