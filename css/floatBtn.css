@@ -1,0 +1,228 @@
+@keyframes flopen1{
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        bottom: 140px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes flopen1{
+    0% {
+        -webkit-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        bottom: 140px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@keyframes flopen2{
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        bottom: 70px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes flopen2{
+    0% {
+        -webkit-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        bottom: 70px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@keyframes flopen3{
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        right: 0px;
+        visibility: hidden;
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        right: 70px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes flopen3{
+    0% {
+        -webkit-transform: rotate(0deg);
+        right: 0px;
+        visibility: hidden;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        right: 70px;
+        visibility: visible;
+    }
+}
+
+div.float-control {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+div.float-control .fcBtn{
+    clear: both;
+    position: relative;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border-radius: 28px;
+    border-width: 0px;
+    border-color: #009688;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+}
+div.float-control .fcBtn svg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+div.float-control .fcBtn .subBtn{
+    clear: both;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border-radius: 28px;
+    border-width: 0px;
+    border-color: #009688;
+    cursor: pointer;
+    text-align: center;
+    z-index: 0;
+    visibility: hidden;
+}
+div.float-control .fcBtn .subBtn svg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes flclose1{
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    0% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        bottom: 140px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes flclose1{
+    100% {
+        -webkit-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    0% {
+        -webkit-transform: rotate(360deg);
+        bottom: 140px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@keyframes flclose2{
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    0% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        bottom: 70px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes flclose2{
+    100% {
+        -webkit-transform: rotate(0deg);
+        bottom: 0px;
+        right: 0px;
+        visibility: hidden;
+    }
+    0% {
+        -webkit-transform: rotate(360deg);
+        bottom: 70px;
+        right: 70px;
+        visibility: visible;
+    }
+}
+@keyframes flclose3{
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        right: 0px;
+        visibility: hidden;
+    }
+    0% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        right: 70px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes flclose3{
+    100% {
+        -webkit-transform: rotate(0deg);
+        right: 0px;
+        visibility: hidden;
+    }
+    0% {
+        -webkit-transform: rotate(360deg);
+        right: 70px;
+        visibility: visible;
+    }
+}

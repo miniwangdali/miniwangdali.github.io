@@ -81,7 +81,7 @@ function resizeNavi() {
             naviWrapper.style.width = "300px";
             naviWrapper.style.height = "100%";
             var header = document.getElementById("navi-header");
-            header.style.display = "inline";
+            header.style.display = "block";
             var menu = document.getElementById("menu");
             menu.style.position = "static";
             menu.style.width = "100%";

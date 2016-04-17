@@ -82,6 +82,7 @@
 }
 div.humberger {
     padding: 20px;
+    float: left;
 }
 div.humberger .hl{
     position: relative;
