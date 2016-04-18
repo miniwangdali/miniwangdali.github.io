@@ -4,14 +4,14 @@
         -ms-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     100% {
         transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         bottom: 140px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @-webkit-keyframes flopen1{
@@ -19,13 +19,13 @@
         -webkit-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     100% {
         -webkit-transform: rotate(360deg);
         bottom: 140px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @keyframes flopen2{
@@ -34,14 +34,14 @@
         -ms-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     100% {
         transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         bottom: 70px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @-webkit-keyframes flopen2{
@@ -49,13 +49,13 @@
         -webkit-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     100% {
         -webkit-transform: rotate(360deg);
         bottom: 70px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @keyframes flopen3{
@@ -63,25 +63,25 @@
         transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     100% {
         transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @-webkit-keyframes flopen3{
     0% {
         -webkit-transform: rotate(0deg);
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     100% {
         -webkit-transform: rotate(360deg);
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -129,7 +129,8 @@ div.float-control .fcBtn .subBtn{
     cursor: pointer;
     text-align: center;
     z-index: 0;
-    visibility: hidden;
+    opacity: 0;
+    display: none;
 }
 div.float-control .fcBtn .subBtn svg{
     position: absolute;
@@ -146,14 +147,14 @@ div.float-control .fcBtn .subBtn svg{
         -ms-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     0% {
         transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         bottom: 140px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @-webkit-keyframes flclose1{
@@ -161,13 +162,13 @@ div.float-control .fcBtn .subBtn svg{
         -webkit-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     0% {
         -webkit-transform: rotate(360deg);
         bottom: 140px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @keyframes flclose2{
@@ -176,14 +177,14 @@ div.float-control .fcBtn .subBtn svg{
         -ms-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     0% {
         transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         bottom: 70px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @-webkit-keyframes flclose2{
@@ -191,13 +192,13 @@ div.float-control .fcBtn .subBtn svg{
         -webkit-transform: rotate(0deg);
         bottom: 0px;
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     0% {
         -webkit-transform: rotate(360deg);
         bottom: 70px;
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @keyframes flclose3{
@@ -205,24 +206,24 @@ div.float-control .fcBtn .subBtn svg{
         transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     0% {
         transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
 @-webkit-keyframes flclose3{
     100% {
         -webkit-transform: rotate(0deg);
         right: 0px;
-        visibility: hidden;
+        opacity: 0;
     }
     0% {
         -webkit-transform: rotate(360deg);
         right: 70px;
-        visibility: visible;
+        opacity: 1;
     }
 }
