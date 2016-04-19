@@ -15,9 +15,11 @@ function onClick(){
     if(opened){
         toHumberger();
         opened = false;
+        menuFolder();
     }else{
         toArrow();
         opened = true;
+        menuFolder();
     }
 }
 function toHumberger(){

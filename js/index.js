@@ -38,8 +38,8 @@ function resizeNavi() {
             menu.style.position = "fixed";
             menu.style.width = 0;
             var menuBtn = document.getElementById("menu-btn");
-            menuBtn.style.display = "inline";
-            menuBtn.style.padding = "10px 20px 10px 20px";
+            menuBtn.style.display = "block";
+            menuBtn.style.padding = "0";
             var ul = menu.getElementsByTagName("ul")[0];
             ul.style.display = "none";
             ul.style.padding = "0px 20px 0px 20px";
@@ -62,10 +62,10 @@ function resizeNavi() {
             menu.style.position = "static";
             menu.style.width = "100%";
             var menuBtn = document.getElementById("menu-btn");
-            menuBtn.style.display = "inline";
-            menuBtn.style.padding = "10px 20px 10px 20px";
+            menuBtn.style.display = "block";
+            menuBtn.style.padding = "0";
             var ul = menu.getElementsByTagName("ul")[0];
-            ul.style.display = "inline";
+            ul.style.display = "block";
             ul.style.padding = "0";
             var lis = ul.getElementsByTagName("li");
             for(var i = 0; i < lis.length; i ++){
@@ -88,7 +88,7 @@ function resizeNavi() {
             var menuBtn = document.getElementById("menu-btn");
             menuBtn.style.display = "none";
             var ul = menu.getElementsByTagName("ul")[0];
-            ul.style.display = "inline";
+            ul.style.display = "block";
             ul.style.padding = "0px 20px 0px 20px";
             var lis = ul.getElementsByTagName("li");
             for(var i = 0; i < lis.length; i ++){
@@ -113,7 +113,9 @@ function menuFolder() {
             if(clientWindow == "1"){
                 menu.style.width = "70%";
                 var myFunction = function(){
-                    ul.style.display = "inline";
+                    if(menuState == 1) {
+                        ul.style.display = "block";
+                    }
                     menu.removeEventListener("transitionend", myFunction);
                 }
                 menu.addEventListener("transitionend", myFunction);
@@ -122,9 +124,11 @@ function menuFolder() {
                 naviWrapper.style.width = "30%";
                 menu.style.width="100%";
                 var myFunction = function() {
-                    var texts = menu.getElementsByClassName("text");
-                    for(var i = 0; i < texts.length; i ++){
-                        texts[i].style.display="table-cell";
+                    if(menuState == 1){
+                        var texts = menu.getElementsByClassName("text");
+                        for(var i = 0; i < texts.length; i ++){
+                            texts[i].style.display="table-cell";
+                        }
                     }
                     naviWrapper.removeEventListener("transitionend", myFunction);
                 }

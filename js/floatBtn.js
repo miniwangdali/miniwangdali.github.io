@@ -1,5 +1,5 @@
 var shareBtn, share1, share2, share3;
-var shareOpenState = false;
+var shareOpenState = false, clickable = true;
 function onMouseOver(button){
     if(button.id == "shareBtn"){
         shareBtn = document.getElementById("shareBtn");
@@ -37,14 +37,17 @@ function onMouseOut(button){
     }
 }
 function onMouseClick(){
-    
-    if(shareOpenState){
-        shareClose();
-        shareOpenState = false;
-    }else{
-        shareOpen();
-        shareOpenState = true;
+    if(clickable){
+        clickable = false;
+        if(shareOpenState){
+            shareClose();
+            shareOpenState = false;
+        }else{
+            shareOpen();
+            shareOpenState = true;
+        }
     }
+    
 }
 
 function shareOpen(){
@@ -98,6 +101,7 @@ function shareOpen(){
         share3.style.opacity = "1";
         share3.removeEventListener("animationend", share3openfunc);
         share3.removeEventListener("webkitAnimationEnd", share3openfunc);
+        clickable = true;    
     };
     share3.addEventListener("animationend", share3openfunc);
     share3.addEventListener("webkitAnimationEnd", share3openfunc);
@@ -117,6 +121,7 @@ function shareClose(){
         share1.style.display = "none";
         share1.removeEventListener("animationend", share1closefunc);
         share1.removeEventListener("webkitAnimationEnd", share1closefunc);
+        clickable = true;
     };
     share1.addEventListener("animationend", share1closefunc);
     share1.addEventListener("webkitAnimationEnd", share1closefunc);
