@@ -1,0 +1,32 @@
+.calendar {
+    margin: 0;
+    padding: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+    color: #009688;
+}
+
+.calendar .year{
+    font-size: 0.7em;
+}
+
+.calendar .cur-year{
+    font-size: 1.2em;
+}
+
+.calendar .cur-month{
+    font-size: 1.2em;
+}
+.calendar .main-block{
+    
+}
+.calendar .days{
+    margin: 0;
+}
+.calendar .days td{
+    width: 2.5em;
+    height: 2em;
+}
+.calendar .weekends{
+    color: #E91E63;
+}
