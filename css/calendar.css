@@ -6,7 +6,6 @@
     padding: 10px;
     background-color: #FFFFFF;
     text-align: center;
-    color: #009688;
     display: inline-table;
 }
 .calendar tr{
@@ -43,7 +42,20 @@
     height: 100%;
     font-size: 0.7em;
 }
-
+.calendar tr td.this-month{
+    color: #009688;
+}
+.calendar tr td.this-month:active{
+    background-color: #009688;
+    color: #FFFFFF;
+}
+.calendar tr td.other-month{
+    color: #b5b5b5;
+}
+.calendar tr td.other-month:active{
+    background-color: #b5b5b5;
+    color: #FFFFFF;
+}
 .calendar .cur-year{
     font-size: 1.2em;
 }

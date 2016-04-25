@@ -26,8 +26,9 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/humberger.js"></script>
     <script type="text/javascript" src="js/floatBtn.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
 </head>
-<body onload="init()">
+<body onload="init(); calendarInit();">
     <div id="navi-wrapper" class="navi-wrapper">
         
         <div id="navi-header" class="header">
@@ -141,7 +142,7 @@
                     </svg>
                 </div>
             </div>
-            <div id="btpBtn" onmouseover="onMouseOver(this);" onmouseout="onMouseOut(this)" class="fcBtn">
+            <div id="btpBtn" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)" class="fcBtn">
                 <svg fill="#009688" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h24v24H0z" fill="none"/>
                     <path d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"/>
