@@ -149,101 +149,106 @@
             </div>
             
         </div>
-        <table cellpadding="5" border="1" id="myCalendar" class="calendar">
+        <table id="myCalendar" class="calendar">
             <tr class="years">
-                <td colspan="3">
-                    <div id="previousYear" class="year">2015</div>
+                <td colspan="2">
+                    <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" style="height: 100%; float:left;">
+                        <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+                        <path d="M0-.5h24v24H0z" fill="none"/>
+                    </svg>
+                    <div id="previousYear" class="year" style="float:left;">2015</div>
+                    <div class="clearframe"></div>
                 </td>
                 <th colspan="3" class="cur-year">
                     <div id="currentYear">2016</div>
                 </th>
-                <td colspan="3">
-                    <div id="nextYear" class="year">2017</div>
+                <td colspan="2">
+                    <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" style="height: 100%; float:right;">
+                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                        <path d="M0-.25h24v24H0z" fill="none"/>
+                    </svg>
+                    <div id="nextYear" class="year" style="float:right;">2017</div>
+                    <div class="clearframe"></div>
                 </td>
             </tr>
             <tr class="month">
-                <td colspan="9" id="currentMonth" class="cur-month">April</div>
-            </tr>
-            <tr class="main-block">
-                <td rowspan="7" colspan="7">
-                    <table cellpadding="5" border="0">
-                        <tr class="days">
-                            <td class="weekends">Sun</td>
-                            <td>Mon</td>
-                            <td>Tue</td>
-                            <td>Wed</td>
-                            <td>Thu</td>
-                            <td>Fri</td>
-                            <td class="weekends">Sat</td>
-                        </tr>
-                        <tr id="days-1" class="days">
-                            <td class="weekends">27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                            <td>1</td>
-                            <td class="weekends">2</td>
-                        </tr>
-                        <tr id="days-2" class="days">
-                            <td class="weekends">3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td class="weekends">9</td>
-                        </tr>
-                        <tr id="days-3" class="days">
-                            <td class="weekends">10</td>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                            <td class="weekends">16</td>
-                        </tr>
-                        <tr id="days-4" class="days">
-                            <td class="weekends">17</td>
-                            <td>18</td>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
-                            <td class="weekends">23</td>
-                        </tr>
-                        <tr id="days-5" class="days">
-                            <td class="weekends">24</td>
-                            <td>25</td>
-                            <td>26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td class="weekends">30</td>
-                        </tr>
-                        <tr id="days-6" class="days">
-                            <td class="weekends">1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td class="weekends">7</td>
-                        </tr>
-                    </table>
+                <td id="preMonth"  class="arrows">
+                    <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
                 </td>
-                <td colspan="2">up</td>
+                <td colspan="5" id="currentMonth" class="cur-month">April</div>
+                <td id="nextMonth"  class="arrows">
+                    <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                        <path d="M0-.75h24v24H0z" fill="none"/>
+                    </svg>
+                </td>
             </tr>
-            <tr>
-                <td colspan="2">s</td>
+            <tr class="days">
+                <td class="weekends">Sun</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td class="weekends">Sat</td>
             </tr>
-            <tr><td colspan="2"></td></tr>
-            <tr>
-                <td colspan="2">d</td>
+            <tr id="days-1" class="days">
+                <td class="weekends">27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td class="weekends">2</td>
             </tr>
-            <tr><td colspan="2">down</td></tr>  
-            <tr>a</tr>
-            <tr>a</tr>
+            <tr id="days-2" class="days">
+                <td class="weekends">3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td class="weekends">9</td>
+            </tr>
+            <tr id="days-3" class="days">
+                <td class="weekends">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td class="weekends">16</td>
+            </tr>
+            <tr id="days-4" class="days">
+                <td class="weekends">17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td class="weekends">23</td>
+            </tr>
+            <tr id="days-5" class="days">
+                <td class="weekends">24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td class="weekends">30</td>
+            </tr>
+            <tr id="days-6" class="days">
+                <td class="weekends">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td class="weekends">7</td>
+            </tr>   
         </table>
     </div>
 </body>
