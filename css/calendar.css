@@ -7,6 +7,7 @@
     background-color: #FFFFFF;
     text-align: center;
     display: inline-table;
+    color: #009688;
 }
 .calendar tr{
     padding: 0;
@@ -54,6 +55,10 @@
 }
 .calendar tr td.other-month:active{
     background-color: #b5b5b5;
+    color: #FFFFFF;
+}
+.calendar tr td.today{
+    background-color: #009688;
     color: #FFFFFF;
 }
 .calendar .cur-year{

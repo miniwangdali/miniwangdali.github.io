@@ -152,7 +152,7 @@
         </div>
         <table id="myCalendar" class="calendar">
             <tr class="years">
-                <td colspan="2">
+                <td onclick="preyear()" colspan="2">
                     <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" style="height: 100%; float:left;">
                         <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
                         <path d="M0-.5h24v24H0z" fill="none"/>
@@ -163,7 +163,7 @@
                 <th colspan="3" class="cur-year">
                     <div id="currentYear">2016</div>
                 </th>
-                <td colspan="2">
+                <td onclick="nextyear()" colspan="2">
                     <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" style="height: 100%; float:right;">
                         <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
                         <path d="M0-.25h24v24H0z" fill="none"/>
@@ -173,14 +173,14 @@
                 </td>
             </tr>
             <tr class="month">
-                <td id="preMonth"  class="arrows">
+                <td id="preMonth" onclick="premonth()" class="arrows">
                     <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
                         <path d="M0 0h24v24H0z" fill="none"/>
                     </svg>
                 </td>
                 <td colspan="5" id="currentMonth" class="cur-month">April</div>
-                <td id="nextMonth"  class="arrows">
+                <td id="nextMonth" onclick="nextmonth()" class="arrows">
                     <svg fill="#009688" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
                         <path d="M0-.75h24v24H0z" fill="none"/>
