@@ -74,14 +74,26 @@ function generateDates(date){
         }
     }
 }
-
 function changeDate(newYear,newMonth){
     var date = new Date();
     date = new Date(date.setFullYear(newYear, newMonth));
     year = date.getFullYear();
     month = date.getMonth();
     today = date.getDate();
-    generateDates(date);
+    for(var i = 0; i < daylist.length; i ++){
+        dayFadeOut(daylist[i], i);
+    }
+    var last = daylist[daylist.length - 1];
+    last.style.animation = "dayOut 0.3s " + (daylist.length - 1) / 50.0 + "s";
+    //item.style.webkitAnimation = "dayIn 0.3s" + " 0." + daylist.length - 1 + "s";
+    last.addEventListener("animationend", all = function(){
+        for(var i = 0; i < daylist.length; i ++){
+            dayFadeIn(daylist[i], i);
+        }
+        generateDates(date);
+        last.removeEventListener("animationend", all);
+    });
+    
 }
 function premonth(){
     changeDate(year, month - 1);
@@ -110,4 +122,46 @@ function nextyear(){
     previousYear.innerHTML = year - 1;
     currentYear.innerHTML = year;
     nextYear.innerHTML = year + 1;
+}
+
+function dayFadeIn(item, time){
+    
+    item.style.animation = "dayIn 0.3s " + time / 50.0 + "s";
+    //item.style.webkitAnimation = "dayIn 0.3s" + " 0." + time + "s";
+    item.addEventListener("animationend", temp = function(){
+        item.style.opacity = 1;
+        item.style.animation = "";
+        //item.style.webkitAnimation = "";
+        item.removeEventListener("animationend", temp);
+        //item.removeEventListener("webkitAnimationend", temp);
+    });
+    // item.addEventListener("webkitAnimationEnd", temp = function(){
+    //     item.style.opacity = 1;
+    //     item.style.animation = "";
+    //     item.style.webkitAnimation = "";
+    //     item.removeEventListener("animationend", temp);
+    //     item.removeEventListener("webkitAnimationend", temp);
+    // });
+    
+}
+function dayFadeOut(item, time){
+    
+    item.style.animation = "dayOut 0.3s " + time / 50.0 + "s";
+    //item.style.webkitAnimation = "dayOut 0.3s" + " 0." + time + "s";
+    item.addEventListener("animationend", temp = function(){
+        item.style.opacity = 0;
+        item.style.animation = "";
+        //item.style.webkitAnimation = "";
+        item.removeEventListener("animationend", temp);
+        //item.removeEventListener("webkitAnimationend", temp);
+    });
+    // item.addEventListener("webkitAnimationEnd", temp = function(){
+    //     item.style.opacity = 0;
+    //     item.style.animation = "";
+    //     item.style.webkitAnimation = "";
+    //     item.removeEventListener("animationend", temp);
+    //     item.removeEventListener("webkitAnimationend", temp);
+    //     dayFadeIn(item, time);
+    // });
+    
 }

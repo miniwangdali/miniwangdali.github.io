@@ -51,7 +51,7 @@ function resizeNavi() {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="table-cell";
             }
-            contentWrapper.style.padding = naviWrapper.style.height + "px 0px 0px 0px";
+            contentWrapper.style.padding = naviWrapper.scrollHeight  + "px 0px 0px 0px";
             break;
         case 2:
             naviWrapper.style.width = "60px";
@@ -75,7 +75,7 @@ function resizeNavi() {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="none";
             }
-            contentWrapper.style.paddingLeft = "60px";
+            contentWrapper.style.padding = "0px 0px 0px 60px";
             break;
         case 3:
             naviWrapper.style.width = "300px";
@@ -98,7 +98,7 @@ function resizeNavi() {
             for(var i = 0; i < texts.length; i ++){
                 texts[i].style.display="table-cell";
             }
-            contentWrapper.style.paddingLeft = "300px";
+            contentWrapper.style.padding = "0px 0px 0px 300px";
             break;
         default:
             break;
