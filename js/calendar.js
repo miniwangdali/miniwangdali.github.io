@@ -5,6 +5,7 @@ var year, month, today;
 var days, daylist = [];
 var months = ["January","February","March","April","May","June","July","August","September","October",
 "November","December"];
+var calendardisable = false;
 
 function calendarInit(){
     calendar = document.getElementById("myCalendar");
@@ -90,38 +91,52 @@ function changeDate(newYear,newMonth){
         for(var i = 0; i < daylist.length; i ++){
             dayFadeIn(daylist[i], i);
         }
+        calendardisable = false;
         generateDates(date);
         last.removeEventListener("animationend", all);
     });
     
 }
 function premonth(){
-    changeDate(year, month - 1);
-    currentMonth.innerHTML = months[month];
-    previousYear.innerHTML = year - 1;
-    currentYear.innerHTML = year;
-    nextYear.innerHTML = year + 1;
+    if(!calendardisable){
+        calendardisable = true;
+        changeDate(year, month - 1);
+        currentMonth.innerHTML = months[month];
+        previousYear.innerHTML = year - 1;
+        currentYear.innerHTML = year;
+        nextYear.innerHTML = year + 1;
+    }
+    
 }
 function nextmonth(){
-    changeDate(year, month + 1);
-    currentMonth.innerHTML = months[month];
-    previousYear.innerHTML = year - 1;
-    currentYear.innerHTML = year;
-    nextYear.innerHTML = year + 1;
+    if(!calendardisable){
+        calendardisable = true;
+        changeDate(year, month + 1);
+        currentMonth.innerHTML = months[month];
+        previousYear.innerHTML = year - 1;
+        currentYear.innerHTML = year;
+        nextYear.innerHTML = year + 1;
+    }
 }
 function preyear(){
-    changeDate(year - 1, month);
-    currentMonth.innerHTML = months[month];
-    previousYear.innerHTML = year - 1;
-    currentYear.innerHTML = year;
-    nextYear.innerHTML = year + 1;
+    if(!calendardisable){
+        calendardisable = true;
+        changeDate(year - 1, month);
+        currentMonth.innerHTML = months[month];
+        previousYear.innerHTML = year - 1;
+        currentYear.innerHTML = year;
+        nextYear.innerHTML = year + 1;
+    }
 }
 function nextyear(){
-    changeDate(year + 1, month);
-    currentMonth.innerHTML = months[month];
-    previousYear.innerHTML = year - 1;
-    currentYear.innerHTML = year;
-    nextYear.innerHTML = year + 1;
+    if(!calendardisable){
+        calendardisable = true;
+        changeDate(year + 1, month);
+        currentMonth.innerHTML = months[month];
+        previousYear.innerHTML = year - 1;
+        currentYear.innerHTML = year;
+        nextYear.innerHTML = year + 1;
+    }
 }
 
 function dayFadeIn(item, time){
