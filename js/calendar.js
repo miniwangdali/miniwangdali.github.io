@@ -3,8 +3,9 @@ var previousYear, currentYear, nextYear;
 var currentMonth;
 var year, month, today;
 var days, daylist = [];
-var months = ["January","February","March","April","May","June","July","August","September","October",
-"November","December"];
+var months = ["一月 January","二月 February","三月 March","四月 April",
+"五月 May","六月 June","七月 July","八月 August","九月 September",
+"十月 October","十一月 November","十二月 December"];
 var calendardisable = false;
 
 function calendarInit(){
@@ -45,6 +46,7 @@ function generateDates(date){
     while(i < daylist.length){
         firstday = new Date(firstday.setDate(num));
         daylist[i].innerHTML = firstday.getDate();
+        if(num - firstday.getDate() > 0) monthChanged = true;
         if(daylist[i].className == "today"){
                 if(firstday.getDay() == 0 || firstday.getDay() == 6){
                     daylist[i].className = "weekends";
@@ -56,7 +58,7 @@ function generateDates(date){
             else daylist[i].className = "this-month";
         }
         if(num == today) daylist[i].className = "today";
-        if(num - firstday.getDate() > 0) monthChanged = true;
+        
         num = firstday.getDate() + 1;
         i ++;
     }
@@ -85,14 +87,14 @@ function changeDate(newYear,newMonth){
         dayFadeOut(daylist[i], i);
     }
     var last = daylist[daylist.length - 1];
-    last.style.animation = "dayOut 0.3s " + (daylist.length - 1) / 50.0 + "s";
-    last.style.webkitAnimation = "dayOut 0.3s " + (daylist.length - 1) / 50.0 + "s";
+    last.style.animation = "dayOut 0.3s " + (daylist.length - 1) / 100.0 + "s";
+    last.style.webkitAnimation = "dayOut 0.3s " + (daylist.length - 1) / 100.0 + "s";
     last.addEventListener("animationend", all1 = function(){
         for(var i = 0; i < daylist.length; i ++){
             dayFadeIn(daylist[i], i);
         }
         calendardisable = false;
-        console.log(1);
+        //console.log(1);
         generateDates(date);
         last.removeEventListener("animationend", all1);
     });
@@ -101,7 +103,7 @@ function changeDate(newYear,newMonth){
             dayFadeIn(daylist[i], i);
         }
         calendardisable = false;
-        console.log(2);
+        //console.log(2);
         generateDates(date);
         last.removeEventListener("webkitAnimationEnd", all2);
     });
@@ -150,8 +152,8 @@ function nextyear(){
 
 function dayFadeIn(item, time){
     
-    item.style.animation = "dayIn 0.3s " + time / 50.0 + "s";
-    item.style.webkitAnimation = "dayIn 0.3s "+ time / 50.0 + "s";
+    item.style.animation = "dayIn 0.3s " + time / 100.0 + "s";
+    item.style.webkitAnimation = "dayIn 0.3s "+ time / 100.0 + "s";
     item.addEventListener("animationend", temp = function(){
         item.style.opacity = 1;
         item.style.animation = "";
@@ -170,8 +172,8 @@ function dayFadeIn(item, time){
 }
 function dayFadeOut(item, time){
     
-    item.style.animation = "dayOut 0.3s " + time / 50.0 + "s";
-    item.style.webkitAnimation = "dayOut 0.3s " + time / 50.0 + "s";
+    item.style.animation = "dayOut 0.3s " + time / 100.0 + "s";
+    item.style.webkitAnimation = "dayOut 0.3s " + time / 100.0 + "s";
     item.addEventListener("animationend", temp = function(){
         item.style.opacity = 0;
         item.style.animation = "";
