@@ -86,16 +86,25 @@ function changeDate(newYear,newMonth){
     }
     var last = daylist[daylist.length - 1];
     last.style.animation = "dayOut 0.3s " + (daylist.length - 1) / 50.0 + "s";
-    //item.style.webkitAnimation = "dayIn 0.3s" + " 0." + daylist.length - 1 + "s";
-    last.addEventListener("animationend", all = function(){
+    last.style.webkitAnimation = "dayOut 0.3s " + (daylist.length - 1) / 50.0 + "s";
+    last.addEventListener("animationend", all1 = function(){
         for(var i = 0; i < daylist.length; i ++){
             dayFadeIn(daylist[i], i);
         }
         calendardisable = false;
+        console.log(1);
         generateDates(date);
-        last.removeEventListener("animationend", all);
+        last.removeEventListener("animationend", all1);
     });
-    
+    last.addEventListener("webkitAnimationEnd", all2 = function(){
+        for(var i = 0; i < daylist.length; i ++){
+            dayFadeIn(daylist[i], i);
+        }
+        calendardisable = false;
+        console.log(2);
+        generateDates(date);
+        last.removeEventListener("webkitAnimationEnd", all2);
+    });
 }
 function premonth(){
     if(!calendardisable){
@@ -142,41 +151,40 @@ function nextyear(){
 function dayFadeIn(item, time){
     
     item.style.animation = "dayIn 0.3s " + time / 50.0 + "s";
-    //item.style.webkitAnimation = "dayIn 0.3s" + " 0." + time + "s";
+    item.style.webkitAnimation = "dayIn 0.3s "+ time / 50.0 + "s";
     item.addEventListener("animationend", temp = function(){
         item.style.opacity = 1;
         item.style.animation = "";
-        //item.style.webkitAnimation = "";
-        item.removeEventListener("animationend", temp);
-        //item.removeEventListener("webkitAnimationend", temp);
+        item.style.webkitAnimation = "";
+        item.removeEventListener("webkitAnimationend", temp);
+        item.removeEventListener("animationend", temp);   
     });
-    // item.addEventListener("webkitAnimationEnd", temp = function(){
-    //     item.style.opacity = 1;
-    //     item.style.animation = "";
-    //     item.style.webkitAnimation = "";
-    //     item.removeEventListener("animationend", temp);
-    //     item.removeEventListener("webkitAnimationend", temp);
-    // });
+    item.addEventListener("webkitAnimationEnd", temp = function(){
+        item.style.opacity = 1;
+        item.style.animation = "";
+        item.style.webkitAnimation = "";
+        item.removeEventListener("animationend", temp);
+        item.removeEventListener("webkitAnimationend", temp);
+    });
     
 }
 function dayFadeOut(item, time){
     
     item.style.animation = "dayOut 0.3s " + time / 50.0 + "s";
-    //item.style.webkitAnimation = "dayOut 0.3s" + " 0." + time + "s";
+    item.style.webkitAnimation = "dayOut 0.3s " + time / 50.0 + "s";
     item.addEventListener("animationend", temp = function(){
         item.style.opacity = 0;
         item.style.animation = "";
-        //item.style.webkitAnimation = "";
+        item.style.webkitAnimation = "";
+        item.removeEventListener("webkitAnimationend", temp);
         item.removeEventListener("animationend", temp);
-        //item.removeEventListener("webkitAnimationend", temp);
     });
-    // item.addEventListener("webkitAnimationEnd", temp = function(){
-    //     item.style.opacity = 0;
-    //     item.style.animation = "";
-    //     item.style.webkitAnimation = "";
-    //     item.removeEventListener("animationend", temp);
-    //     item.removeEventListener("webkitAnimationend", temp);
-    //     dayFadeIn(item, time);
-    // });
+    item.addEventListener("webkitAnimationEnd", temp = function(){
+        item.style.opacity = 0;
+        item.style.animation = "";
+        item.style.webkitAnimation = "";
+        item.removeEventListener("animationend", temp);
+        item.removeEventListener("webkitAnimationend", temp);
+    });
     
 }
