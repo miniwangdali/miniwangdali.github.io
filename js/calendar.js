@@ -46,23 +46,23 @@ function generateDates(date){
     var first = firstday.getDay();
     var num = 1;
     var i = first;
-    var monthchangeupd = false;
+    var monthchanged = false;
     while(i < daylist.length){
         firstday = new Date(firstday.setDate(num));
         daylist[i].innerHTML = firstday.getDate();
-        if(num - firstday.getDate() > 0) monthchangeupd = true;
+        if(num - firstday.getDate() > 0) monthchanged = true;
         if(daylist[i].className == "today"){
                 if(firstday.getDay() == 0 || firstday.getDay() == 6){
                     daylist[i].className = "weekends";
                 }else{
-                    if(monthchangeupd) daylist[i].className = "other-month";
+                    if(monthchanged) daylist[i].className = "other-month";
                     else daylist[i].className = "this-month";
                 }
         }else if(daylist[i].className != "weekends"){
-            if(monthchangeupd) daylist[i].className = "other-month";
+            if(monthchanged) daylist[i].className = "other-month";
             else daylist[i].className = "this-month";
         }
-        if(num == today) daylist[i].className = "today";
+        if(num == today && !monthchanged) daylist[i].className = "today";
         
         num = firstday.getDate() + 1;
         i ++;

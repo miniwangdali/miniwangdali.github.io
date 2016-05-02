@@ -1,12 +1,12 @@
 div.re-topbar{
     position: relative;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     margin: 0;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 0px 5px 0px;
     height: 2em;
-    box-shadow: 0px 0px 5px #d5d5d5;
+    box-shadow: 0px 0px 5px -2px #004D40;
     background-color: #FFFFFF;
 }
 div.re-topbar .re-wrapper{
@@ -38,13 +38,19 @@ div.re-content{
     margin: 10px 0 0 0;
     padding: 10px;
 }
+div.re-content a{
+    color: #EC407A;
+}
+
 div.re-content .card{
     margin:0px 0px 15px 0px;
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 5px;
-    border-width: 1px;
+    border-width: 0px;
     border-color: #009688;
+    border-style: solid;
+    box-shadow: 0px 0px 5px -3px #004D40;
     backface-visibility: visible;
 }
 div.re-content .card .section{

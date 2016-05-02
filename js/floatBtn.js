@@ -1,5 +1,6 @@
 var shareBtn, share1, share2, share3;
 var shareOpenState = false, clickable = true;
+
 function onMouseOver(button){
     if(button.id == "shareBtn"){
         shareBtn = document.getElementById("shareBtn");
