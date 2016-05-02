@@ -1,7 +1,7 @@
 var resumeCH, resumeEN, resumeCard;
 var language = "CH";
 
-function init(){
+function resumeInit(){
     resumeCH = document.getElementsByName("CH");
     resumeEN = document.getElementsByName("EN");
     resumeCard = document.getElementsByClassName("card");

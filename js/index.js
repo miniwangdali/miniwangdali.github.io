@@ -1,9 +1,12 @@
 var naviWrapper, contentWrapper;
 var width, height, aspect;
 var clientWindow, menuState;
+var mainContent;
 function init(){
     naviWrapper = document.getElementById("navi-wrapper");
     contentWrapper = document.getElementById("content-wrapper");
+    mainContent = document.getElementById("mainContent");
+    contentWrapper.style.width = window.innerWidth + "px";
     window.addEventListener("resize", onWindowResize, false);
     onWindowResize();
     menuState = 0;
@@ -52,6 +55,7 @@ function resizeNavi() {
                 texts[i].style.display="table-cell";
             }
             contentWrapper.style.padding = naviWrapper.scrollHeight  + "px 0px 0px 0px";
+            mainContent.style.width = window.innerWidth + "px";
             break;
         case 2:
             naviWrapper.style.width = "60px";
@@ -76,6 +80,7 @@ function resizeNavi() {
                 texts[i].style.display="none";
             }
             contentWrapper.style.padding = "0px 0px 0px 60px";
+            mainContent.style.width = window.innerWidth - 60 + "px";
             break;
         case 3:
             naviWrapper.style.width = "300px";
@@ -99,6 +104,7 @@ function resizeNavi() {
                 texts[i].style.display="table-cell";
             }
             contentWrapper.style.padding = "0px 0px 0px 300px";
+            mainContent.style.width = window.innerWidth - 300 + "px";
             break;
         default:
             break;
