@@ -28,7 +28,6 @@
     <script type="text/javascript" src="./js/humberger.js"></script>
     <script type="text/javascript" src="./js/floatBtn.js"></script>
     <script type="text/javascript" src="./js/scroll.js"></script>
-    <script type="text/javascript" src="./js/calendar.js"></script>
     <script type="text/javascript" src="./js/queue.js"></script>
 </head>
 <body onload="init(); calendarInit();">
@@ -56,6 +55,7 @@
         <div id="menu" class="menu">
             <ul id="menu-ul">
                 <li id="menulist1">
+                    <a href="./index.html">
                     <div class="icon">
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke="null" fill="#ffffff" id="svg_4" d="m21.229126,10.200093l-3.208258,-3.208262l0,-3.706079c0,-0.670108 -0.543028,-1.213179 -1.214127,-1.213179c-0.669552,0 -1.212584,0.543071 -1.212584,1.213179l0,1.279418l-2.388803,-2.388886c-1.181045,-1.180407 -3.234491,-1.178315 -4.412848,0.002136l-8.021849,8.021673c-0.473545,0.47449 -0.473545,1.242241 0,1.716c0.473764,0.474358 1.243011,0.474358 1.7166,0l8.021075,-8.021888c0.261301,-0.259933 0.721857,-0.259933 0.981792,-0.000769l8.022443,8.022657c0.237885,0.2372 0.548025,0.355186 0.858089,0.355186c0.310694,0 0.621355,-0.118112 0.858507,-0.355186c0.473721,-0.473722 0.473721,-1.241472 -0.00004,-1.716z"/>
@@ -67,9 +67,11 @@
                         <div class="english">Home</div>
                     </div>
                     <div class="clearframe"></div>
+                    </a>
                 </li>
                 
                 <li id="menulist1">
+                    <a href="./resume.html">
                     <div class="icon">
                         <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0h24v24H0z" fill="none"/>
@@ -81,6 +83,7 @@
                         <div class="english">My Resume</div>
                     </div>
                     <div class="clearframe"></div>
+                    </a>
                 </li>
                 <li id="menulist2">
                     <div class="icon">
@@ -127,7 +130,8 @@
         </div>
     </div>
     <div id="content-wrapper" class="content-wrapper">
-        <iframe src="https://www.daydreamqian.cc/author/wang__dali/"></iframe>
+        <div id="mainContent" class="main-content">
+        </div>
         <div id="float-control" class="float-control" onload="initCtrlBtn()">
             <div id="shareBtn" onmouseover="onMouseOver(this);" onmouseout="onMouseOut(this)" onclick="onMouseClick()" class="fcBtn">
                 <svg fill="#009688" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
