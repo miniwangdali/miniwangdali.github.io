@@ -12,18 +12,24 @@ body {
     font: inherit;
     font-family:'微软雅黑' , Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
+body a {
+    font-style: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
 div {
     margin: 0;
     padding: 0;
 }
 div.navi-wrapper {
-    position: absolute;
+    position: fixed;
     height: 100%;
     background-color: #009688;
     -webkit-transition: width 0.7s;
     -moz-transition: width 0.7s;
     transition: width 0.7s;
     color: #E0F2F1;
+    z-index: 5;
 }
 div.navi-wrapper .header{
     padding: 40px 0 0 0;

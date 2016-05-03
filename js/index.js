@@ -35,6 +35,7 @@ function resizeNavi() {
         case 1:
             naviWrapper.style.width = "100%";
             naviWrapper.style.height = "33%";
+            naviWrapper.style.position = "absolute";
             var header = document.getElementById("navi-header");
             header.style.display = "none";
             var menu = document.getElementById("menu");
@@ -60,6 +61,7 @@ function resizeNavi() {
         case 2:
             naviWrapper.style.width = "60px";
             naviWrapper.style.height = "100%";
+            naviWrapper.style.position = "fixed";
             var header = document.getElementById("navi-header");
             header.style.display = "none";
             var menu = document.getElementById("menu");
@@ -85,6 +87,7 @@ function resizeNavi() {
         case 3:
             naviWrapper.style.width = "300px";
             naviWrapper.style.height = "100%";
+            naviWrapper.style.position = "fixed";
             var header = document.getElementById("navi-header");
             header.style.display = "block";
             var menu = document.getElementById("menu");
