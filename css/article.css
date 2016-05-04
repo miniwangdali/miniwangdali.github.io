@@ -8,7 +8,7 @@ div.ar-topbar{
     height: 2em;
     box-shadow: 0px 0px 5px -2px #004D40;
     background-color: #FFFFFF;
-    z-index: 1;
+    z-index: 2;
     float: right;
 }
 div.ar-content{
@@ -26,6 +26,7 @@ div.ar-content .card{
     border-style: solid;
     box-shadow: 0px 0px 5px -3px #004D40;
     backface-visibility: visible;
+    z-index: 1;
 }
 div.ar-content .card a{
     color: #EC407A;

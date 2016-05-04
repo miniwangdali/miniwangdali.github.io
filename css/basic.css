@@ -75,6 +75,13 @@ div.navi-wrapper .menu ul li{
     -moz-transition: padding 0.7s;
     transition: padding 0.7s;
 }
+div.navi-wrapper .menu ul li.selected{
+    color: #E6EE9C;
+    
+}
+div.navi-wrapper .menu ul li.selected svg{
+    fill: #E6EE9C; 
+}
 div.navi-wrapper .menu ul li .icon{
     display: table-cell;
     vertical-align: middle;
