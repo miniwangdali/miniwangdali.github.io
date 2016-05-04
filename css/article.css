@@ -13,7 +13,7 @@ div.ar-topbar{
 }
 div.ar-content{
     margin: 0 0 0 0;
-    padding: 60px 10px;
+    padding: 60px 15px;
 }
 
 div.ar-content .card{
@@ -26,4 +26,24 @@ div.ar-content .card{
     border-style: solid;
     box-shadow: 0px 0px 5px -3px #004D40;
     backface-visibility: visible;
+}
+div.ar-content .card a{
+    color: #EC407A;
+}
+div.ar-content .card .inner-content{
+    padding: 10px;
+}
+div.ar-content .card .inner-content h2{
+    color: #009688;
+}
+div.ar-content .card .inner-content h2 a{
+    color: #009688;
+}
+div.ar-content .card .inner-content p{
+    text-indent: 2em;
+}
+
+div.ar-content .card .inner-content .entry-date{
+    float: right;
+    color: #009688;
 }
