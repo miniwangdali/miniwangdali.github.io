@@ -26,9 +26,7 @@ div.p-content .card{
     backface-visibility: visible;
     z-index: 1;
 }
-div.p-content .card a{
-    color: #EC407A;
-}
+
 div.p-content .card{
     padding: 10px;
 }
@@ -40,6 +38,7 @@ div.p-content .card img{
 }
 div.p-content .card h4{
     color: #009688;
+    width: 100%;
 }
 div.p-content .card h4 a{
     color: #009688;
@@ -48,10 +47,10 @@ div.p-content .card h4 span{
     color: #EC407A;
 }
 div.p-content .card .ops{
-    display: table-row;
+    text-align: center;
+    width: 100%;
 }
 div.p-content .card .op{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+    
+    color: #FFFFFF;
 }
