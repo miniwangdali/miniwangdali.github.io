@@ -15,8 +15,8 @@ div.p-content{
     padding: 60px 15px;
 }
 div.p-content .card{
-    margin:0px 0px 15px 0px;
-    padding: 20px;
+    margin:0px 5px 15px 5px;
+    padding: 10px 15px 10px 15px;
     background-color: #FFFFFF;
     border-radius: 5px;
     border-width: 0px;
@@ -27,9 +27,6 @@ div.p-content .card{
     z-index: 1;
 }
 
-div.p-content .card{
-    padding: 10px;
-}
 div.p-content .card img{
     width: 16em;
     height: 10em; 
@@ -39,6 +36,7 @@ div.p-content .card img{
 div.p-content .card h4{
     color: #009688;
     width: 100%;
+    height: 1em;
 }
 div.p-content .card h4 a{
     color: #009688;
@@ -46,9 +44,15 @@ div.p-content .card h4 a{
 div.p-content .card h4 span{
     color: #EC407A;
 }
+div.p-content .card .description{
+    height: 4em;
+    width: 16em; 
+    text-indent: 2em;
+}
 div.p-content .card .ops{
     text-align: center;
     width: 100%;
+    
 }
 div.p-content .card .op{
     
