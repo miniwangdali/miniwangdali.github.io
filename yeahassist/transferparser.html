@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8" />
+    <title>Yeah Education Transfer Parser</title>
+    <meta name="author" content="蓝天新星" />
+    <meta name="viewport" content=" 
+         height = device-height, 
+         width = device-width,
+         initial-scale = 1.0, 
+         minimum-scale = 0.5, 
+         maximum-scale = 1.5, 
+         user-scalable = no, 
+         target-densitydpi = device-dpi" />
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="./transferparser.css" />
+    <link rel="stylesheet" href="./jquery.jsonview.css" />
+    <!-- JS
+  ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./jquery.jsonview.js"></script>
+    <script type="text/javascript" src="./parser.js"></script>
+    <script type="text/javascript" src="./transferparser.js"></script>
+
+</head>
+
+<body>
+    <input id="file_input" type="file" accept="text/html,text/xml,text/plain" multiple="false">
+    <button onclick="parseFile()">Parse</button>
+    <button onclick="copy()">Copy Result</button>
+    <div id="json_view"></div>
+</body>
+<footer>
+</footer>
+
+</html>
